@@ -88,3 +88,27 @@ const data = {
   // Instantly assign Chart.js version
   const chartVersion = document.getElementById('chartVersion');
   chartVersion.innerText = Chart.version;
+
+  var mybutton = document.getElementById("myBtn");
+
+// Function to show the button when scrolling down 20px
+function scrollFunction() {
+  if (document.body.scrollTop > 20 || document.documentElement.scrollTop > 20) {
+    mybutton.style.display = "block";
+  } else {
+    mybutton.style.display = "none";
+  }
+}
+
+// Add an event listener to the window object, 
+// calling the scrollFunction() whenever the page is scrolled
+window.onscroll = function() { scrollFunction(); };
+
+// Function to scroll to the top of the page when the button is clicked
+function topFunction() {
+  document.documentElement.scrollTop = 0; // For Chrome, Firefox, IE and Opera
+}
+
+// Add an event listener to the button, 
+// calling the topFunction() when the button is clicked
+mybutton.addEventListener("click", topFunction);

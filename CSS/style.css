@@ -93,13 +93,14 @@ textarea, input{
 .container{
     max-width: 1140px;
     margin: 0 auto;
-    padding-left: 0.9rem;
-    padding-right: 0.9rem;
+
 
 }
 
 .grid{
     display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 20px;
 }
 
 
@@ -974,7 +975,7 @@ background:rgba(0,0,0,.5);
 }
 
 
-.cp{
+.cp, .projects, .contact-me{
     position:relative;
     padding:10px;
     margin-bottom: 20px;
@@ -1114,19 +1115,6 @@ background:rgba(0,0,0,.5);
 
 
 
-
-
-
-.x-box-cont .problem-name{
-    display: flexbox;
-    font-size: 30px;
-    margin-top: 40px;
-    margin-left: 300px;
-    font-weight: bold;
-    margin-bottom: 10px;
-    white-space: nowrap;
-    color: var(--primary-color);
-}
 
 
 .problem-solution {
@@ -1283,7 +1271,7 @@ h1 {
 }
 
 
-.career-objectives, .hobbies{
+.career-objectives{
         position:relative;
         padding:10px;
         margin-bottom: 20px;
@@ -1380,3 +1368,346 @@ h1 {
     background: white;
   }
 
+  h1.projects {
+    text-align: center;
+    margin-top: 50px;
+    color: #333;
+    font-size: 36px;
+    font-weight: 600;
+}
+
+#Portfolio {
+    padding: 70px 0;
+    text-align: center;
+}
+
+
+
+#Portfolio .sub-pera {
+    font-size: 18px;
+    margin-bottom: 20px;
+}
+
+#Portfolio .project-row {
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+}
+
+#Portfolio .proj-item {
+    width: calc(33.33% - 20px);
+    margin-bottom: 40px;
+    position: relative;
+    overflow: hidden;
+    border-radius: 10px;
+    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.1);
+    transition: transform 0.4s ease;
+}
+
+#Portfolio .proj-item:hover {
+    transform: translateY(-10px);
+}
+
+#Portfolio .proj-image img {
+    width: 100%;
+    display: block;
+    border-radius: 10px 10px 0 0;
+    transition: transform 0.4s ease;
+}
+
+#Portfolio .proj-item:hover .proj-image img {
+    transform: scale(1.1);
+}
+
+#Portfolio .proj-info {
+    background: #fff;
+    padding: 20px;
+    position: absolute;
+    bottom: -100%;
+    left: 0;
+    width: 100%;
+    transition: bottom 0.4s ease;
+    border-radius: 0 0 10px 10px;
+}
+
+#Portfolio .proj-item:hover .proj-info {
+    bottom: 0;
+}
+
+#Portfolio .proj-info h4 {
+    font-size: 20px;
+    margin-bottom: 10px;
+}
+
+#Portfolio .proj-info p {
+    font-size: 16px;
+    color: #666;
+    margin-bottom: 20px;
+}
+
+#Portfolio .proj-info a {
+    display: inline-block;
+    width: 40px;
+    height: 40px;
+    line-height: 40px;
+    border-radius: 50%;
+    background-color: #333;
+    color: #fff;
+    font-size: 18px;
+    transition: background-color 0.4s, transform 0.4s;
+}
+
+#Portfolio .proj-info a:hover {
+    background-color: #ff5722;
+    transform: rotate(360deg);
+}
+
+@media only screen and (max-width: 768px) {
+    #Portfolio .proj-item {
+        width: calc(50% - 20px);
+    }
+}
+
+@media only screen and (max-width: 480px) {
+    #Portfolio .proj-item {
+        width: 100%;
+    }
+}
+
+@media (hover: hover) {
+    #Portfolio .proj-item:hover .proj-info a {
+        transform: scale(1.2);
+    }
+}
+
+
+.contact__list {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+  }
+  
+  .contact__list dt,
+  .contact__list dd {
+    margin: 5px 0;
+  }
+  
+  .contact__list dt {
+    font-weight: bold;
+  }
+  
+  .contact__social-button {
+    background-color: #fff;
+    color: #333;
+    padding: 10px 20px;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+    transition: all 0.3s ease-in-out;
+    margin: 0 5px;
+  }
+  
+  .contact__social-button:hover {
+    background-color: #ddd;
+    /* Add hover effect: Subtle color change and border */
+    border: 1px solid #ccc;
+  }
+  
+  /* Optional: Style based on social media platform (for visual distinction)*/
+  
+  .contact__social-button--facebook {
+    background-color: #3b5998; /* Facebook color */
+    color: white;
+  }
+  
+  .contact__social-button--facebook:hover {
+    background-color: #304e8c; /* Darker Facebook color on hover */
+  }
+  
+  .contact__social-button--github {
+    background-color: #4183c6; /* GitHub color */
+    color: white;
+  }
+  
+  .contact__social-button--github:hover {
+    background-color: #3672a8; /* Darker GitHub color on hover */
+  }
+  
+  .contact__social-button--linkedin {
+    background-color: #0077b5; /* LinkedIn color */
+    color: white;
+  }
+  
+  .contact__social-button--linkedin:hover {
+    background-color: #006699; /* Darker LinkedIn color on hover */
+  }
+  
+  /* Contact Form Styles */
+  
+  .contact__list {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+  }
+  
+  .contact__list dt,
+  .contact__list dd {
+    margin: 5px 0;
+  }
+  
+  .contact__list dt {
+    font-weight: bold;
+  }
+  
+  .contact__socials {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+  }
+  
+  .contact__socials li {
+    display: inline-block;
+    margin: 0 10px;
+  }
+  
+  .contact__social-link {
+    color: #333;
+    text-decoration: none;
+    transition: all 0.3s ease-in-out;
+  }
+  
+  .contact__social-link:hover {
+    color: #000;
+    /* Added hover effect: Underline animation */
+    text-decoration: underline;
+    animation: underline 0.3s ease-in-out forwards;
+  }
+  
+  @keyframes underline {
+    from { transform: translateY(-5px); }
+    to { transform: translateY(0); }
+  }
+  
+  /* Contact Form Styles */
+  
+  .contact__form-title {
+    margin-bottom: 10px;
+    text-align: center;
+  }
+  
+  .contact__input-div {
+    margin-bottom: 20px;
+    
+  }
+  
+  .contact__input, .textarea {
+    width: 100%;
+    padding: 10px 15px;
+    border-radius: 4px;
+    font-size: 16px;
+    border: 1px solid #ccc;
+  background-color: #f5f5f5;
+  padding: 10px 15px;
+  border-radius: 4px;
+  font-size: 16px;
+  }
+  
+
+  
+  #contact-message {
+    color: red;
+    display: none;
+  }
+  
+  .button {
+    background-color: #0095ff;
+    color: white;
+    padding: 10px 20px;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+    transition: all 0.3s ease-in-out;
+  }
+  
+  .button:hover {
+    background-color: #007bff;
+  }
+  
+  .button-icon {
+    margin-left: 5px;
+    font-size: 18px;
+  }
+  
+  .footer__copy {
+    text-align: center;
+    font-size: 14px;
+    margin-top: 20px;
+  }
+  
+  /* Optional: Background & Shadow Customization */
+
+  
+  
+  .contact__info {
+    background-color: #fff;
+    padding: 20px;
+    border-radius: 4px;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1); /* Added shadow effect */
+  }
+  .contact__info-content { /* New styling */
+    display: flex;
+    flex-direction: column; /* Make content a vertical column */
+    gap: 20px; /* Add space between elements */
+    height: 100%; /* Make wrapper fill the available height */
+  }
+
+  #myBtn {
+ /* Hide the button initially */
+    position: fixed; /* Fix the button to the viewport */
+    bottom: 20px; /* Position the button 20px from the bottom */
+    right: 30px; /* Position the button 30px from the right */
+    z-index: 99; /* Ensure the button is on top of other elements */
+    border: none; /* Remove border */
+    outline: none; /* Remove outline */
+    background-color: #0095ff; /* Set background color */
+    color: white; /* Set text color */
+    cursor: pointer; /* Set cursor to pointer on hover */
+    padding: 10px 20px; /* Add padding */
+    border-radius: 4px; /* Add rounded corners */
+    font-size: 16px; /* Set font size */
+  }
+  
+  #myBtn:hover {
+    background-color: #007bff; /* Change background color on hover */
+  }
+
+  
+/*
+.contact{
+    background: url(../Image/bg.jpeg);
+    background-size: cover;
+    background-position: 50%;
+    position: relative;
+}
+
+.contact::before{
+    content: ' ';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+
+
+}
+
+.contact__content{
+    z-index: 10;
+    position: relative;
+
+}
+
+.contact__container{
+    grid-template-columns: 4fr 5fr 3fr;
+    column-gap: 1.875rem;
+}
