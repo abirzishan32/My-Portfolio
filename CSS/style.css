@@ -370,49 +370,7 @@ textarea, input{
 
 /*===========Education==========*/
 
-.edu{
-  position:relative;
-  padding:10px 20px;
-  margin-bottom: 20px;
-  background:white;
-  font-size:25px;
-  border-top-right-radius:10px;
-  border-bottom-left-radius:10px;
-  transition:all 1s;
-  width: 165px;
-  &:after,&:before{
-    content:"";
-    width:5px;
-    height:5px;
-    position:absolute;
-    border :0px solid #fff;
-    transition:all 1s;
-    }
-  &:after{
-    top:-1px;
-    left:-1px;
-    border-top:5px solid black;
-    border-left:5px solid black;
-  }
-  &:before{
-    bottom:-1px;
-    right:-1px;
-    border-bottom:5px solid black;
-    border-right:5px solid black;
-  }
-  &:hover{
-    border-top-right-radius:0px;
-  border-bottom-left-radius:0px;
-background:rgba(0,0,0,.5);
-    color:white;
-    &:before,&:after{
-      
-      width:5px;
-      height:5px;
-       border-color:white;
-    }
-  }
-}
+
 
 .timeline {
     max-width: 800px;
@@ -447,6 +405,11 @@ background:rgba(0,0,0,.5);
     border-radius: 10px;
     box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
     z-index: 1;
+    transition: transform 0.3s ease-in-out;
+}
+
+.text-box:hover {
+    transform: scale(1.1);
 }
 
 .text-box h2 {
@@ -505,7 +468,6 @@ background:rgba(0,0,0,.5);
 }
 
 .container-timeline:hover .text-box {
-    background: #007bff;
     color: #fff;
     box-shadow: 0 4px 10px rgba(0, 123, 255, 0.2);
 }
@@ -529,7 +491,6 @@ background:rgba(0,0,0,.5);
         transform: translateX(-50%);
     }
 }
-
 
 
 .things > .content {
@@ -935,7 +896,7 @@ background:rgba(0,0,0,.5);
 }
 
 
-.cp, .projects, .contact-me{
+.cp, .projects, .contact-me, .edu {
     position:relative;
     padding:10px;
     margin-bottom: 20px;
