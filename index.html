@@ -7,7 +7,7 @@
     <!--CSS--> 
     <link rel="stylesheet" href="CSS/style.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.1/css/all.min.css" />
-
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons"rel="stylesheet">
 
     <!--Remixicons-->
     <link href="https://cdn.jsdelivr.net/npm/remixicon@4.1.0/fonts/remixicon.css"
@@ -31,7 +31,6 @@
     <!--Header-->
     <header class="header" id="header">
         <nav class="nav container">
-            <div class="nav__menu" id= "nav-menu">
                 <ul class="nav__list">
                     <li>
                         <a href="#home" class="nav__link active-link">Home</a>
@@ -46,22 +45,33 @@
                     </li>
 
                     <li>
-                        <a href="#projects" class="nav__link">Project</a>
+                        <a href="#competitiveprogramming" class="nav__link">Competitive Programming</a>
+                    </li>
+
+                    <li>
+                        <a href="#careerobj" class="nav__link">Career Objectives</a>
+                    </li>
+
+                    <li>
+                        <a href="#projects" class="nav__link">My Project</a>
                     </li>
 
 
                     <li>
-                        <a href="#competitiveprogramming" class="nav__link">Programming</a>
-                    </li>
+                        <a href="#extracurr" class="nav__link">Extra Curriculumn</a>
 
                     <li>
-                        <a href="#contact" class="nav__link">Contact</a>
+                        <a href="#contact" class="nav__link">Get in Touch</a>
                     </li>
+
+            
 
                 </ul>
-
+                    <input class="nav__toggle" type="checkbox" id="nav-toggler">
+                    <label class="nav__toggle__icon" for="nav-toggler"><svg xmlns="http://www.w3.org/2000/svg" x="0px" y="0px" width="30" height="30" viewBox="0,0,256,256">
+                        <g fill="#ffffff" fill-rule="nonzero" stroke="none" stroke-width="1" stroke-linecap="butt" stroke-linejoin="miter" stroke-miterlimit="10" stroke-dasharray="" stroke-dashoffset="0" font-family="none" font-weight="none" font-size="none" text-anchor="none" style="mix-blend-mode: normal"><g transform="scale(5.12,5.12)"><path d="M5,8c-0.72127,-0.0102 -1.39216,0.36875 -1.75578,0.99175c-0.36361,0.623 -0.36361,1.39351 0,2.01651c0.36361,0.623 1.0345,1.00195 1.75578,0.99175h40c0.72127,0.0102 1.39216,-0.36875 1.75578,-0.99175c0.36361,-0.623 0.36361,-1.39351 0,-2.01651c-0.36361,-0.623 -1.0345,-1.00195 -1.75578,-0.99175zM5,23c-0.72127,-0.0102 -1.39216,0.36875 -1.75578,0.99175c-0.36361,0.623 -0.36361,1.39351 0,2.01651c0.36361,0.623 1.0345,1.00195 1.75578,0.99175h40c0.72127,0.0102 1.39216,-0.36875 1.75578,-0.99175c0.36361,-0.623 0.36361,-1.39351 0,-2.01651c-0.36361,-0.623 -1.0345,-1.00195 -1.75578,-0.99175zM5,38c-0.72127,-0.0102 -1.39216,0.36875 -1.75578,0.99175c-0.36361,0.623 -0.36361,1.39351 0,2.01651c0.36361,0.623 1.0345,1.00195 1.75578,0.99175h40c0.72127,0.0102 1.39216,-0.36875 1.75578,-0.99175c0.36361,-0.623 0.36361,-1.39351 0,-2.01651c-0.36361,-0.623 -1.0345,-1.00195 -1.75578,-0.99175z"></path></g></g>
+                        </svg></label>
                 
-            </div>
             
         </nav>
     </header>
@@ -72,7 +82,15 @@
         <!----------------Home-------------->
         <section class="home" id="home">
             <div class="home__container container grid">
-                <img src="Image/profile.png" alt="" class="home__img"/>
+
+                <div class="home-img-container">
+                    <img
+                        class="home-img"
+                        src="Image/profile.png"
+                        alt="Abir Rahman"
+                    />
+                </div>
+             <!--   <img src="Image/profile.png" alt="" class="home__img"/> -->
 
                 <div class="home__data">
                     <h1 class="home__name">
@@ -154,9 +172,7 @@
         </section>
 
 
-        <div class="animated--intro">
-            <img src="Image/Intro.gif" alt="Animated Intro" class="animated-intro">
-        </div>
+     
         
         <!----------------Education----------------->
       <div class="timeline">
@@ -216,7 +232,7 @@
         <!-- Soft Skills -->
         <div class="skills__section">
             <h3 class="skills__title">Soft Skills</h3>
-            <div class="skills__cards">
+            <div class="skills__cards grid">
                 <div class="skill-card">
                     <div class="skill-card__icon">
                         <i class="ri-team-line"></i>
@@ -530,21 +546,6 @@
                         <h3 class="oj-name">LeetCode</h3>
                         <h3>Solved Problems : </h3>
 
-                        <div class="chartCard">
-                            <div class="chartBox">
-                              <canvas id="myChart"></canvas>
-                            </div>
-                            <div>
-                                <p></p>
-                            </div>
-                          </div>
-
-                        
-    
-    
-
-
-
 
 
                         <h3>My Solutions : </h3>
@@ -653,7 +654,7 @@
 
 
         <!-------------Career Objectives------------>
-        <h1 class="career-objectives">Career Objectives</h1>
+        <h1 class="career-objectives" id="careerobj">Career Objectives</h1>
         <div class="career-div">
             <p>
                 <span class="objective-heading">As a Computer Science undergraduate student,</span>
@@ -717,8 +718,48 @@
                 </div>
             </section>
 
+            <!-------------Extra Curriculumn------------>
+            <h1 class="extra-curriculumn" id="extracurr">Extra Curriculumn</h1>
+            <div class="activities-container">
+                <div class="activity" id="club1">
+                    <img src="Image/sgipc.jpeg" alt="sgipc">
+                    <h3>SGPIC</h3>
+                    <p>Playing a role of contest and event organizer and manager.</p>
+                    <p>Years Active : 2022-Present</p>
+
+                </div>
+                <div class="activity" id="club2">
+                    <img src="Image/kuet_math_club.png" alt="kuet math club">
+                    <h3>KUET Math Club</h3>
+                    <p>Member of KUET Math Club. Participated in various events.</p>
+                    <p>Years Active : 2022-Present</p>
+                </div>
+                <div class="activity" id="eca club">
+                    <img src="Image/eca_club.png" alt="eca">
+                    <h3>Chittagong College ECA Club</h3>
+                    <p>Chittagong College ECA Club" is the first ever authorized club in Chittagong College's Intermediate level.</p>
+                    </p>
+                    <p>Years Active : 2018-2020</p>
+                </div>
+
+                <div class="activity" id="club3">
+                    <img src="Image/cmc.jpeg" alt="cmc">
+                    <h3>Chittagong Math Circle</h3>
+                    <p>Has been a member of award wining math club in Bangladesh, which mentors national and
+                        international level of Olympiad participants, and math enthusiasts.</p>
+                    <p>Years Active : 2016-2020</p>
+                </div>
+
+               
+            </div>
+
+
+
+
+
+             <!-------------------------Contact Me------------------------->
             <h1 class="contact-me" id="contact">Get in Touch</h2>
-            <!-------------------------Contact Me------------------------->
+           
             <section class="contact section" id="contact">
 
                 <div class="contact__content container">
@@ -767,6 +808,22 @@
                     </div>
                 </div>
             </section>
+
+
+         
+        
+        
+        <div class="area" >
+                    <ul class="circles">
+                            <li></li>
+                            <li></li>
+                            <li></li>
+                            <li></li>
+                            <li></li>
+                            <li></li>
+                            <li></li>
+                    </ul>
+            </div >
             
 
 
@@ -779,10 +836,10 @@
     <script src="JS/main.js"></script>
     
 
-    <!-- Scroll Top -->
-    <!-- Add this button at the bottom of your HTML body -->
-    <button id="myBtn" title="Go to top">Top</button>
-
+    <!--Back to Top Button-->
+    <a href="#home" class="back-to-top">
+        <span class="material-icons">arrow_upward</span>
+    </a>
 </body>
 </html>
 
